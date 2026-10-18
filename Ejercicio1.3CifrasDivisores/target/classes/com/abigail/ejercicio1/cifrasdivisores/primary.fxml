@@ -1,0 +1,95 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.abigail.ejercicio1.cifrasdivisores.PrimaryController"
+      spacing="20"
+      alignment="CENTER">
+
+    <padding>
+        <Insets top="20" right="25" bottom="20" left="25"/>
+    </padding>
+
+    <Label text="Cifras y Divisores de un Número"
+           style="-fx-font-size: 20px; -fx-font-weight: bold;"/>
+
+    <HBox alignment="CENTER" spacing="10">
+        <Label text="Ingrese un número"/>
+        <TextField fx:id="txtNumero"
+                   text="6915"
+                   prefWidth="200"
+                   alignment="CENTER_RIGHT"/>
+        <Button text="Analizar"
+                onAction="#analizar"
+                prefWidth="100"/>
+        <Button text="Limpiar"
+                onAction="#limpiar"
+                prefWidth="90"/>
+    </HBox>
+
+    <HBox spacing="35" alignment="TOP_CENTER">
+
+        <VBox spacing="18" prefWidth="390">
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Cantidad de cifras" prefWidth="190"/>
+                <TextField fx:id="txtCantidadCifras"
+                           text="4" editable="false"
+                           prefWidth="100"/>
+            </HBox>
+
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Suma de cifras impares" prefWidth="190"/>
+                <TextField fx:id="txtSumaImpares"
+                           text="15" editable="false"
+                           prefWidth="100"/>
+            </HBox>
+
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Suma de cifras pares" prefWidth="190"/>
+                <TextField fx:id="txtSumaPares"
+                           text="6" editable="false"
+                           prefWidth="100"/>
+            </HBox>
+
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Suma total de cifras" prefWidth="190"/>
+                <TextField fx:id="txtSumaTotal"
+                           text="21" editable="false"
+                           prefWidth="100"/>
+            </HBox>
+
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Cifra mayor" prefWidth="190"/>
+                <TextField fx:id="txtCifraMayor"
+                           text="9" editable="false"
+                           prefWidth="100"/>
+            </HBox>
+
+            <HBox spacing="10" alignment="CENTER_LEFT">
+                <Label text="Cifra menor" prefWidth="190"/>
+                <TextField fx:id="txtCifraMenor"
+                           text="1" editable="false"
+                           prefWidth="100"/>
+            </HBox>
+        </VBox>
+
+        <VBox spacing="8" prefWidth="250">
+    <Label text="Divisores"
+           style="-fx-font-size: 16px; -fx-font-weight: bold;"/>
+    <ListView fx:id="listaDivisores"
+               prefWidth="250"
+              minWidth="250"
+              prefHeight="170"
+              minHeight="170"
+              maxHeight="170"/>
+</VBox>
+
+    </HBox>
+
+</VBox>

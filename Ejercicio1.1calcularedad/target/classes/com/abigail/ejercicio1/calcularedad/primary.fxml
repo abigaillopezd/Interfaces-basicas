@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns="http://javafx.com/javafx/21"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.abigail.ejercicio1.calcularedad.PrimaryController"
+      alignment="CENTER"
+      spacing="15">
+
+    <padding>
+        <Insets top="25" right="30" bottom="25" left="30"/>
+    </padding>
+
+    <Label text="Fecha de nacimiento"
+           style="-fx-font-size: 16px;"/>
+
+    <TextField fx:id="txtFecha"
+               promptText="dd/mm/aaaa"
+               prefWidth="220"/>
+
+    <HBox alignment="CENTER" spacing="10">
+        <Button text="Calcular"
+                onAction="#calcularEdad"/>
+        <Button text="Limpiar"
+                onAction="#limpiar"/>
+    </HBox>
+
+    <Label fx:id="lblEdad"
+           text="Resultado"
+           style="-fx-font-style: italic;"
+           wrapText="true"/>
+
+</VBox>
